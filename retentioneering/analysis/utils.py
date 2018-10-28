@@ -238,7 +238,7 @@ def plot_graph_python(df_agg, agg_type, settings, plot_name=None):
     width = np.where(width > 20, 20, width)
     width = np.where(width < 2, 2, width)
 
-    pos = nx.random_layout(G, seed=2)
+    pos = nx.random_layout(G, random_state=2)
     f = sns.mpl.pyplot.figure(figsize=(20, 10))
     nx.draw_networkx_edges(G, pos, edge_color='b', alpha=0.2, width=width);
     nx.draw_networkx_nodes(G, pos, node_color='b', alpha=0.3)
